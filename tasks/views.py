@@ -57,7 +57,6 @@ def signin(request):
                 'form': AuthenticationForm,
                 'error': 'Username or password is incorrect'
             })
-
-        return render(request, 'signin.html', {
-            'form': AuthenticationForm
-        })
+        else:
+            login(request, user)
+            return redirect('tasks')
