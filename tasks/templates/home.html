@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content%}
+<main class="container">
+  <h1 class="display-1 text-center">Django CRUD App</h1>
+  <section class="card card-body py-5">
+    <p>
+      In Django, a CRUD (Create, Read, Update, Delete) system allows managing
+      database operations via views and models. Django’s ORM simplifies
+      interactions, while class-based views (e.g., CreateView, ListView)
+      streamline implementation. For authentication, Django provides built-in
+      tools (django.contrib.auth) handling user registration, login, logout, and
+      permissions. The User model and decorators (e.g., @login_required) secure
+      views. Custom user models and third-party packages (like Django-Allauth)
+      extend functionality for OAuth or advanced workflows. Together, CRUD and
+      authentication form the backbone of dynamic, user-aware web applications
+      in Django.
+    </p>
+    <div class="text-center">
+      <a class="btn btn-dark" href="/signin/">Signin</a>
+      <a class="btn btn-secondary" href="/signup/">Signup</a>
+    </div>
+  </section>
+</main>
+{% endblock %}
