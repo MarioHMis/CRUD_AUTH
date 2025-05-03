@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: crud-auth
+    env: python
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn djangocrud.wsgi:application"
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - fromDatabase:
+          name: crud-auth-db
+          property: connectionString
+          key: DATABASE_URL
+
+databases:
+  - name: crud-auth-db
+    databaseName: crud_auth
+    user: crud_user
