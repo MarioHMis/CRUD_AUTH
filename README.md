@@ -22,15 +22,11 @@ A modern and responsive web app built with Django 5 and Bootstrap 5. This projec
 - **Deployment:** Render
 - **Environment Management:** Python Decouple
 
-## 📸 Screenshots
-
-_Add screenshots here if needed._
-
 ## 🧪 Running Locally
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/your-username/CRUD_AUTH.git
+git clone https://github.com/MarioHMis/CRUD_AUTH.git
 
 # 2. Create and activate virtual environment
 python -m venv venv
@@ -81,7 +77,7 @@ Una aplicación web moderna y responsiva construida con Django 5 y Bootstrap 5. 
 
 ```bash
 # 1. Clona el repositorio
-git clone https://github.com/your-username/CRUD_AUTH.git
+git clone https://github.com/MarioHMis/CRUD_AUTH.git
 
 # 2. Crea y activa un entorno virtual
 python -m venv venv
