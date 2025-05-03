@@ -47,13 +47,10 @@ DATABASE_URL=your-database-url
 # 5. Run migrations and start server
 python manage.py migrate
 python manage.py runserver
-
+```
 
 ---
 
-### 🇪🇸 Versión en Español 
-
-```markdown
 # 🛡️ CRUD_AUTH – Gestor de Tareas Seguro
 
 Una aplicación web moderna y responsiva construida con Django 5 y Bootstrap 5. Este proyecto ofrece un entorno seguro para que los usuarios gestionen sus tareas personales con autenticación completa.
@@ -78,9 +75,7 @@ Una aplicación web moderna y responsiva construida con Django 5 y Bootstrap 5. 
 - **Despliegue:** Render
 - **Gestión de entorno:** Python Decouple
 
-## 📸 Capturas
 
-_Agrega capturas si lo deseas._
 
 ## 🧪 Ejecutar Localmente
 
@@ -103,3 +98,4 @@ DATABASE_URL=tu-url-de-bd
 # 5. Aplica migraciones y ejecuta el servidor
 python manage.py migrate
 python manage.py runserver
+```
