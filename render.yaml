@@ -15,7 +15,3 @@ services:
           property: connectionString
           key: DATABASE_URL
 
-databases:
-  - name: crud-auth-db
-    databaseName: crud_auth
-    user: crud_user
