@@ -6,4 +6,5 @@ urlpatterns = [
     path('registration/', include('django.contrib.auth.urls')),
     path('tasks/', include('apps.tasks.urls')),
     path('', include('apps.core.urls')),
+    path('accounts/', include('apps.accounts.urls')),
 ]
