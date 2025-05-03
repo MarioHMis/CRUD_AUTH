@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow p-4 border-danger">
+        <h4 class="card-title text-center fw-bold text-danger mb-4">
+          ¿Estás seguro de eliminar esta tarea?
+        </h4>
+
+        <p class="text-center">
+          <strong>{{ object.title }}</strong>
+        </p>
+        <p class="text-muted text-center small">
+          {{ object.description|default:"Sin descripción" }}
+        </p>
+
+        <form method="post" class="d-flex justify-content-between">
+          {% csrf_token %}
+          <a href="{% url 'task_list' %}" class="btn btn-secondary">Cancelar</a>
+          <button type="submit" class="btn btn-danger">Eliminar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

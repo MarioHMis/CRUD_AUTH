@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-5">
+  <div class="text-center mb-5">
+    <h1 class="display-4 fw-bold">Bienvenido a <span class="text-primary">CRUD Auth</span> 🛠️</h1>
+    <p class="lead">Una aplicación web para gestionar tareas con autenticación segura.</p>
+    <a href="{% url 'login' %}" class="btn btn-outline-primary btn-lg mt-3">
+      <i class="bi bi-box-arrow-in-right"></i> Iniciar sesión
+    </a>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title"><i class="bi bi-gear-fill"></i> Funcionalidades</h5>
+          <ul class="list-unstyled mt-3">
+            <li>✅ Registro y login de usuarios</li>
+            <li>✅ CRUD completo de tareas</li>
+            <li>✅ Solo puedes ver tus propias tareas</li>
+            <li>✅ Modo oscuro/claro con un clic</li>
+            <li>✅ Seguridad integrada con Django</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title"><i class="bi bi-code-slash"></i> Tecnologías utilizadas</h5>
+          <ul class="list-unstyled mt-3">
+            <li>🧠 Django 5</li>
+            <li>🧰 Bootstrap 5 + Iconos</li>
+            <li>🗃 PostgreSQL</li>
+            <li>🌐 Deploy listo para Render</li>
+            <li>🔐 Autenticación personalizada</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center mt-5 pt-4 border-top">
+    <p class="text-muted">Desarrollado con ❤️ por <strong>Marware</strong></p>
+  </footer>
+</div>
+
+{% endblock %}

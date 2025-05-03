@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold">Mis Tareas</h2>
+    <a href="{% url 'task_create' %}" class="btn btn-success">
+      <i class="bi bi-plus-circle"></i> Nueva tarea
+    </a>
+  </div>
+
+  {% if object_list %}
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      {% for task in object_list %}
+        <div class="col">
+          <div class="card h-100 shadow-sm {% if task.completed %}border-success{% else %}border-warning{% endif %}">
+            <div class="card-body">
+              <h5 class="card-title">{{ task.title }}</h5>
+              <p class="card-text text-muted small">
+                {{ task.description|default:"Sin descripción" }}
+              </p>
+              <span class="badge {% if task.completed %}bg-success{% else %}bg-warning text-dark{% endif %}">
+                {% if task.completed %}Completada{% else %}Pendiente{% endif %}
+              </span>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <a href="{% url 'task_update' task.pk %}" class="btn btn-sm btn-outline-primary">Editar</a>
+              <a href="{% url 'task_delete' task.pk %}" class="btn btn-sm btn-outline-danger">Eliminar</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="alert alert-info">No tienes tareas aún. ¡Crea una nueva!</div>
+  {% endif %}
+</div>
+{% endblock %}
